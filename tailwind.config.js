@@ -15,7 +15,9 @@ export default {
 				playfair: "Playfair Display",
 				lato: "Lato",
 			},
-			backgroundImage: {},
+			backgroundImage: {
+				fixedQuote: "url('assets/breakfast.jpg')",
+			},
 		},
 	},
 	plugins: [],
