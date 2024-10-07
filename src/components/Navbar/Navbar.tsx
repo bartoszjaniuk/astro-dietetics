@@ -2,7 +2,11 @@ import React from "react";
 import { MENU_LINKS } from "./constants/menuLinks";
 import { motion } from "framer-motion";
 import { ResponsiveLinks } from "./components/ResponsiveLinks";
-import { INSTAGRAM_URL, FACEBOOK_URL } from "../../constants/socialMedia";
+import {
+	INSTAGRAM_URL,
+	FACEBOOK_URL,
+	TIKTOK_URL,
+} from "../../constants/socialMedia";
 
 type Props = {
 	currentPath: string;
@@ -12,7 +16,7 @@ const makePathFromLink = (path: string) => path.slice(1).replace(" ", "-");
 
 export const Navbar = ({ currentPath }: Props) => {
 	return (
-		<div className="bg-white w-full fixed z-50">
+		<div className="bg-white w-full fixed z-[100]">
 			<nav className="container responsive-padding mx-auto h-24 flex items-center justify-between gap-16 relative z-50 ">
 				<a href="/">
 					<img
@@ -58,7 +62,7 @@ export const Navbar = ({ currentPath }: Props) => {
 						</a>
 					</motion.li>
 					<motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-						<a href={FACEBOOK_URL} className="cursor-pointer">
+						<a href={TIKTOK_URL} className="cursor-pointer">
 							<img width={24} src="/assets/tiktok.svg" alt="Profil na TikTok" />
 						</a>
 					</motion.li>

@@ -3,6 +3,9 @@ import { ModalProvider } from "../../providers/ModalProvider";
 import { Offer } from "./components/Offer";
 import { useInitMailer } from "./hooks/useInitMailer";
 import { FixedQuote } from "./components/FixedQuote";
+import { ThreeCards } from "./components/ThreeCards";
+import { Cooperation } from "./components/Cooperation";
+import { CalculatorIntro } from "./components/CalculatorIntro";
 
 const Content = () => {
 	useInitMailer();
@@ -10,6 +13,9 @@ const Content = () => {
 		<>
 			<Offer />
 			<FixedQuote />
+			<ThreeCards />
+			<Cooperation />
+			<CalculatorIntro />
 		</>
 	);
 };

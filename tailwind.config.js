@@ -10,6 +10,7 @@ export default {
 				primaryDark: "#3b2f29",
 				secondary: "#d2bfa3",
 				font: "#444",
+				softGray: "#f7f7f7",
 			},
 			fontFamily: {
 				playfair: "Playfair Display",
