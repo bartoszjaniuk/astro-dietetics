@@ -2,6 +2,7 @@ import React from "react";
 import { SlideX } from "../../../animations/SlideX";
 import { SlideY } from "../../../animations/SlideY";
 import { LinkButton } from "./LinkButton";
+import { AppRoute } from "../../../components/Footer/components/enums/appRoutes";
 
 const classNameAfter =
 	'after:absolute after:content-[""] after:w-full after:h-full after:top-0 after:left-0 after:-z-[1] after:bg-softGray after:[clip-path:polygon(0%_0%,100%_0%,100%_100%,0%_75%)]';
@@ -37,10 +38,12 @@ export const CalculatorIntro = () => {
 					</SlideX>
 					<SlideY className="flex flex-col text-xl lg:flex-row gap-2 lg:gap-8">
 						<LinkButton
+							navigateTo={AppRoute.KALKULATOR}
 							className="w-full text-center xl:w-fit xl:text-left"
 							text="Przejdź do kalkulatora"
 						/>
 						<LinkButton
+							navigateTo="#contact"
 							className="w-full text-center xl:w-fit xl:text-left"
 							text="Napisz do mnie"
 							variant="inverted"

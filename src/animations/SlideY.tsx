@@ -1,4 +1,4 @@
-import { type Variants, motion } from "framer-motion";
+import { type Variants } from "framer-motion";
 import type { PropsWithChildren } from "react";
 import { MotionComponent } from "./MotionComponent";
 

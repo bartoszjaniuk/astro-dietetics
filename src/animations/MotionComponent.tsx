@@ -9,7 +9,9 @@ export const MotionComponent = <T extends React.ElementType>({
 	as,
 	...props
 }: MotionComponentProps<T>) => {
-	const Component = as || "div";
+	const Component = (as || "div") as string;
+
+	// string | React.ForwardRefExoticComponent<any>
 
 	const MotionCustomComponent = motion(Component);
 

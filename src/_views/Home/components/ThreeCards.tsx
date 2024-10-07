@@ -1,6 +1,5 @@
 import React from "react";
 import { SlideY } from "../../../animations/SlideY";
-import { Button } from "./Button";
 import { LinkButton } from "./LinkButton";
 import { AppRoute } from "../../../components/Footer/components/enums/appRoutes";
 
