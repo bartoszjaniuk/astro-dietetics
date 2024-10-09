@@ -12,7 +12,7 @@ const classNameBefore =
 export const CalculatorIntro = () => {
 	return (
 		<section
-			className={`min-h-[60rem] flex items-center z-10 py-8 gap-10 lg:gap-16 ${classNameAfter} ${classNameBefore}`}
+			className={`min-h-[65rem] flex items-center z-10 py-8 gap-10 lg:gap-16 ${classNameAfter} ${classNameBefore}`}
 		>
 			<div className="container responsive-padding mx-auto flex flex-col xl:flex-row gap-8">
 				<div className="w-full flex flex-col gap-8 xl:gap-16">

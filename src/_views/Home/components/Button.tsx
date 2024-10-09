@@ -1,29 +1,41 @@
 type Props = {
 	onClick?: React.MouseEventHandler<HTMLButtonElement>;
-	text: string;
 	variant?: "default" | "inverted";
 	className?: string;
-};
+	isWithoutAnimation?: boolean;
+	size?: "sm" | "md" | "lg";
+} & React.ComponentProps<"button">;
 
 const variantMap = {
 	default:
-		"text-white bg-primary hover:text-primary hover:bg-white hover:border-primary",
+		"text-white bg-primary enabled:hover:text-primary enabled:hover:bg-white enabled:hover:border-primary",
 	inverted:
-		"text-primary bg-white hover:text-white hover:bg-primary hover:border-white",
+		"text-primary bg-white enabled:hover:text-white enabled:hover:bg-primary enabled:hover:border-white",
+};
+const className = "enabled:[]";
+
+const buttonSize = {
+	sm: "text-xl xl:text-lg p-4",
+	md: "xl:text-2xl xl:px-6 xl:py-6",
+	lg: "xl:text-3xl px-8 py-4 xl:px-6 xl:py-6",
 };
 
 export const Button = ({
 	onClick,
-	text,
 	variant = "default",
 	className,
+	children,
+	isWithoutAnimation,
+	size = "lg",
+	...rest
 }: Props) => {
 	return (
 		<button
-			className={`w-fit px-8 py-4 border border-transparent rounded-sm cursor-pointer transition-all hover:scale-105 xl:text-3xl xl:px-6 xl:py-6 ${variantMap[variant]} ${className}`}
+			className={`w-fit border border-transparent rounded-sm cursor-pointer transition-all disabled:opacity-50 disabled:cursor-not-allowed  ${!isWithoutAnimation ? "hover:scale-105" : ""} ${buttonSize[size]} ${variantMap[variant]} ${className}`}
 			onClick={onClick}
+			{...rest}
 		>
-			{text}
+			{children}
 		</button>
 	);
 };

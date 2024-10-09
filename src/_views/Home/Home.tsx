@@ -6,6 +6,7 @@ import { FixedQuote } from "./components/FixedQuote";
 import { ThreeCards } from "./components/ThreeCards";
 import { Cooperation } from "./components/Cooperation";
 import { CalculatorIntro } from "./components/CalculatorIntro";
+import { Contact } from "./components/Contact";
 
 const Content = () => {
 	useInitMailer();
@@ -16,6 +17,7 @@ const Content = () => {
 			<ThreeCards />
 			<Cooperation />
 			<CalculatorIntro />
+			<Contact />
 		</>
 	);
 };

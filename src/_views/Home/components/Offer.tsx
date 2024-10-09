@@ -1,14 +1,17 @@
 import React from "react";
-import { SlideX } from "../../../animations/SlideX";
 import { RoutePath } from "../../../components/Footer/components/enums/appRoutes";
 import { LinkButton } from "./LinkButton";
-import { AbstractShape } from "./AbstractShape";
+import { AbstractShape } from "@/components/AbstractShape/AbstractShape";
+import { SlideX } from "@/animations/SlideX";
+import { SlideY } from "@/animations/SlideY";
 
 export const Offer = () => {
 	return (
 		<main className="relative bg-white min-h-screen lg:min-h-[93vh] xl:min-h-screen z-50">
+			<AbstractShape className="absolute left-40 top-8 z-[1] w-40 opacity-85" />
+
+			<AbstractShape className="absolute right-24 bottom-64 z-[1] w-20 opacity-85" />
 			<div className="min-h-screen lg:min-h-[93vh] xl:min-h-screen flex flex-col lg:flex-row bg-white container responsive-padding mx-auto gap-8 xl:gap-0">
-				<AbstractShape />
 				<div className="flex-1 flex flex-col gap-8 justify-center items-center lg:items-start pt-4 md:pt-8 lg:pt-0 lg:w-1/2 ">
 					<SlideX
 						component="h2"
