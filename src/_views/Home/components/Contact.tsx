@@ -5,6 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "../../../components/Input/Input";
 import { Button } from "./Button";
 import { CheckBox } from "@/components/Checkbox/Checkbox";
+import { AbstractShape } from "@/components/AbstractShape/AbstractShape";
 
 const classNameAfter =
 	'after:absolute after:content-[""] after:w-full after:h-full after:top-0 after:left-0 after:-z-[1] after:bg-white  md:after:[clip-path:polygon(0%_0%,100%_0%,100%_75%,0%_100%)]';
@@ -26,7 +27,11 @@ const contactFormSchema = z.object({
 
 type ContactFormFieldValues = z.infer<typeof contactFormSchema>;
 
-const Content = () => {
+const Form = ({
+	onSubmit,
+}: {
+	onSubmit: (formData: ContactFormFieldValues) => Promise<void>;
+}) => {
 	const {
 		reset,
 		register,
@@ -34,6 +39,7 @@ const Content = () => {
 		formState: { errors, isValid, isSubmitting },
 	} = useForm<ContactFormFieldValues>({
 		mode: "all",
+
 		resolver: zodResolver(contactFormSchema),
 		defaultValues: {
 			email: "",
@@ -43,6 +49,69 @@ const Content = () => {
 		},
 	});
 
+	return (
+		<form
+			className="flex flex-col gap-4"
+			onSubmit={handleSubmit((data) => {
+				onSubmit(data);
+				reset();
+			})}
+		>
+			<Input
+				required
+				id="email"
+				type="email"
+				name="email"
+				label="Email"
+				placeholder="Wpisz swój email"
+				register={register}
+				errors={errors}
+			/>
+			<Input
+				required
+				id="thread"
+				name="thread"
+				label="Temat"
+				placeholder="Podaj temat wiadomości"
+				register={register}
+				errors={errors}
+			/>
+
+			<Input
+				required
+				isTextArea
+				id="message"
+				name="message"
+				label="Wiadomość"
+				placeholder="Podaj treść wiadomości"
+				register={register}
+				errors={errors}
+			/>
+			<CheckBox
+				id="statute"
+				name="statute"
+				placeholder="Akceptuję regulamin"
+				register={register}
+				errors={errors}
+				rules={{
+					required: "Proszę zaakceptować regulamin",
+				}}
+			/>
+
+			<Button
+				className="mt-4 w-full"
+				size="sm"
+				type="submit"
+				disabled={!isValid}
+				isWithoutAnimation
+			>
+				{isSubmitting ? "Trwa wysyłanie wiadomości..." : "Wyślij wiadomość"}
+			</Button>
+		</form>
+	);
+};
+
+const Content = () => {
 	const [isSuccess, setIsSuccess] = React.useState(false);
 	const [successMessage, setSuccessMessage] = React.useState("");
 
@@ -79,13 +148,16 @@ const Content = () => {
 		} catch (error) {
 			console.log(error);
 		}
-		reset();
 	};
 
 	return (
 		<main
+			id="napisz-do-mnie"
 			className={`min-h-full flex flex-col justify-center items-center z-10 bg-white py-8 gap-10 lg:gap-16 ${classNameAfter} ${classNameBefore}`}
 		>
+			<AbstractShape className="left-24 -top-40 absolute w-48 opacity-80" />
+			<AbstractShape className="left-48 top-48 absolute w-8 opacity-80" />
+			<AbstractShape className="right-48 top-32 absolute w-16 opacity-80" />
 			<div className="container responsive-padding mx-auto flex flex-col gap-10">
 				<div className="text-center flex flex-col gap-4">
 					<h2 className="text-primary text-5xl">Skontaktuj się ze mną</h2>
@@ -104,66 +176,10 @@ const Content = () => {
 					</div>
 					<div className="w-full flex flex-col gap-4 justify-center">
 						<h3 className="text-5xl text-primary py-4">Napisz do mnie</h3>
-						<form
-							className="flex flex-col gap-4"
-							onSubmit={handleSubmit(onSubmit)}
-						>
-							<Input
-								required
-								id="email"
-								type="email"
-								name="email"
-								label="Email"
-								placeholder="Wpisz swój email"
-								register={register}
-								errors={errors}
-							/>
-							<Input
-								required
-								id="thread"
-								name="thread"
-								label="Temat"
-								placeholder="Podaj temat wiadomości"
-								register={register}
-								errors={errors}
-							/>
-
-							<Input
-								required
-								isTextArea
-								id="message"
-								name="message"
-								label="Wiadomość"
-								placeholder="Podaj treść wiadomości"
-								register={register}
-								errors={errors}
-							/>
-							<CheckBox
-								id="statute"
-								name="statute"
-								placeholder="Akceptuję regulamin"
-								register={register}
-								errors={errors}
-								rules={{
-									required: "Proszę zaakceptować regulamin",
-								}}
-							/>
-
-							<Button
-								className="mt-4 w-full"
-								size="sm"
-								type="submit"
-								disabled={!isValid}
-								isWithoutAnimation
-							>
-								{isSubmitting
-									? "Trwa wysyłanie wiadomości..."
-									: "Wyślij wiadomość"}
-							</Button>
-						</form>
-						{/* {successMessage && (
-						<p className={styles["success-message"]}>{successMessage}</p>
-					)} */}
+						<Form onSubmit={onSubmit} />
+						{successMessage && (
+							<p className="text-green-700">{successMessage}</p>
+						)}
 					</div>
 				</div>
 			</div>

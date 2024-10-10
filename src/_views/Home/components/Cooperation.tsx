@@ -69,7 +69,7 @@ const Content = () => {
 
 			<div className="container responsive-padding mx-auto relative">
 				<div className="hidden xl:block absolute left-0 bottom-0 w-full h-full">
-					<img src="/assets/wavyline.svg" alt="test" />
+					<img src="/assets/wavyline.svg" alt="Linia przedstawiajaca fale" />
 				</div>
 				<div className="flex object-center lg:py-16 sm:py-24 ">
 					<div className="w-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-10">
@@ -79,7 +79,11 @@ const Content = () => {
 					</div>
 				</div>
 			</div>
-			<LinkButton navigateTo="#napiszdomnie" text="Napisz do mnie" />
+			<LinkButton
+				className="w-full lg:w-fit container responsive-padding mx-auto text-center"
+				navigateTo="#napisz-do-mnie"
+				text="Napisz do mnie"
+			/>
 		</section>
 	);
 };
