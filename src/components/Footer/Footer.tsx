@@ -8,7 +8,7 @@ import statuteReference from "/regulamin.pdf";
 
 export const Footer = () => {
 	return (
-		<footer className="w-full bg-primary text-white h-full z-10">
+		<footer className="w-full bg-primary text-white h-full z-10 font-lato">
 			<div className="container mx-auto h-full primary-selection bg-inherit">
 				<div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-2 py-8 responsive-padding bg-inherit text-inherit">
 					<Column {...FOOTER_CONTACT} />

@@ -1,0 +1,19 @@
+---
+import { About } from "@/_views/About/About";
+import Layout from "../_ui/Layout.astro";
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+	"/public/assets/certificates/*.{jpeg,jpg,png}",
+	{
+		eager: true,
+	},
+);
+const certificates = Object.values(images).map((image) => image.default);
+---
+
+<Layout
+	title="Gabinet Dietetyczny UMAMI - mgr Aleksandra Kajstura-Janiuk - O mnie"
+	description="Jestem dietetykiem klinicznym i psychodietetykiem. Nauczę Cię jak zadbać o siebie oraz zacząć prowadzić zdrowy styl życia krok po kroku. Służę pomocą jeśli zmagasz się z problemami zdrowotnymi, z nadmierną lub za niską masą ciała lub po prostu chcesz zmienić swoje nawyki żywieniowe"
+>
+	<About certificates={certificates} client:load />
+</Layout>

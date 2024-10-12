@@ -40,7 +40,7 @@ export const Column = ({ entries, heading, gridColumn }: ColumnProps) => {
 					return (
 						<p
 							key={index}
-							className="text-sm sm:text-base 2xl:text-lg font-thin  text-start text-white"
+							className="text-sm sm:text-base 2xl:text-lg text-start text-white"
 						>
 							{entry.content}
 						</p>
@@ -49,7 +49,7 @@ export const Column = ({ entries, heading, gridColumn }: ColumnProps) => {
 					return (
 						<a
 							key={index}
-							className="text-sm sm:text-base 2xl:text-lgfont-medium text-start text-white"
+							className="text-sm sm:text-base 2xl:text-lg  text-start text-white border-b-white border-b-[1px] w-fit"
 							href={entry.link}
 						>
 							{entry.content}
