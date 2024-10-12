@@ -5,9 +5,10 @@ export interface Props {
 	title: string;
 	description: string;
 	image?: string;
+	keywords?: string;
 }
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const { title, description, image = logo } = Astro.props;
+const { title, description, keywords = "", image = logo } = Astro.props;
 ---
 
 <link rel="canonical" href={canonicalURL} />
@@ -17,7 +18,7 @@ const { title, description, image = logo } = Astro.props;
 <meta name="description" content={description} />
 <meta
 	name="keywords"
-	content="dietetyk kliniczny, psychodietetyk, dietetyk online, dietetyk racibórz, dietetyk umami, mgr aleksandra kajstura janiuk, gabinet dietetyczny, obliczenie zapotrzebowania, dieta, jadłospis, akademia fitness"
+	content={`dietetyk kliniczny, psychodietetyk, dietetyk online, dietetyk racibórz, ${keywords} dietetyk umami, mgr aleksandra kajstura janiuk, gabinet dietetyczny, obliczenie zapotrzebowania, dieta, jadłospis, akademia fitness`}
 />
 
 <meta property="og:type" content="website" />
