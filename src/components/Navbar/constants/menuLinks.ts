@@ -12,6 +12,10 @@ export const MENU_LINKS = [
 		path: "/oferta",
 	},
 	{
+		title: "Cennik",
+		path: "/cennik",
+	},
+	{
 		title: "Diety",
 		path: "/diety",
 	},

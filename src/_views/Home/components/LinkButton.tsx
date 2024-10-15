@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils";
+
 type Props = {
 	navigateTo: string;
 	text: string;
@@ -20,7 +22,10 @@ export const LinkButton = ({
 }: Props) => {
 	return (
 		<a
-			className={`w-fit px-8 py-4 rounded-sm cursor-pointer transition-all hover:skew-y-1 hover:scale-110 xl:text-3xl xl:px-6 xl:py-6 ${variantMap[variant]} ${className}`}
+			className={cn(
+				`w-fit px-8 py-4 rounded-sm cursor-pointer transition-all hover:skew-y-1 hover:scale-110 xl:text-3xl xl:px-6 xl:py-6 ${variantMap[variant]}`,
+				className,
+			)}
 			href={navigateTo}
 		>
 			{text}
