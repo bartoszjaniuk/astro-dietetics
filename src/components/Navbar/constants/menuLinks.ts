@@ -16,7 +16,7 @@ export const MENU_LINKS = [
 		path: "/cennik",
 	},
 	{
-		title: "Diety",
+		title: "Jadłospisy",
 		path: "/diety",
 	},
 	{
