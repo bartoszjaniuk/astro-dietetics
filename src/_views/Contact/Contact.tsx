@@ -73,13 +73,6 @@ const Page = () => {
 					<AbstractShape className="w-16 absolute top-32 -right-32" />
 
 					<div className="flex flex-col gap-4">
-						<p className="font-medium text-2xl">Godziny pracy</p>
-						<div className="flex flex-col">
-							<p>poniedziałek-piątek</p>
-							<p>godziny: 9-17</p>
-						</div>
-					</div>
-					<div className="flex flex-col gap-4">
 						<p className="font-medium text-2xl">Gabinet Dietetyczny UMAMI</p>
 						<div className="flex gap-2 items-center">
 							<img
@@ -133,7 +126,9 @@ const Page = () => {
 								className="underline text-white"
 							>
 								Health Labs {""}
-								<span className="font-medium font-lato">kod: UMAMI10</span>
+								<span className="font-medium font-lato">
+									kod rabatowy: UMAMI10
+								</span>
 							</a>
 						</div>
 					</div>
