@@ -2,7 +2,7 @@ export enum AppRoute {
 	HOME = "",
 	ABOUT = "O mnie",
 	OFFER = "Oferta",
-	MENUS = "Jadłospisy",
+	MENUS = "diety",
 	KALKULATOR = "Kalkulator",
 	CONTACT = "Kontakt",
 	PRICE_LIST = "Cennik",

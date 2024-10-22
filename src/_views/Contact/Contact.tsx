@@ -1,52 +1,13 @@
 import { SlideY } from "@/animations/SlideY";
-import { ContactSection } from "./components/ContactSection";
-import { Introduction } from "./components/Introduction";
+
 import { SlideX } from "@/animations/SlideX";
-import {
-	ContactForm,
-	type ContactFormFieldValues,
-} from "../shared/components/ContactForm";
+import { ContactForm } from "../shared/components/ContactForm";
 import { AbstractShape } from "@/components/AbstractShape/AbstractShape";
 import * as React from "react";
+import { useContact } from "@/hooks/useContact";
 
 const Page = () => {
-	const [isSuccess, setIsSuccess] = React.useState(false);
-	const [successMessage, setSuccessMessage] = React.useState("");
-
-	React.useEffect(() => {
-		if (isSuccess) {
-			setSuccessMessage("Wiadomość została wysłana.");
-			setTimeout(() => {
-				setSuccessMessage("");
-				setIsSuccess(false);
-			}, 3000);
-		}
-	}, [isSuccess]);
-
-	const onSubmit = async (formData: ContactFormFieldValues) => {
-		try {
-			const response = await fetch(
-				"https://umami-get-mailed.onrender.com/api/v1/email/send-email",
-				{
-					method: "POST",
-					headers: {
-						"Content-Type": "application/json",
-						Accept: "application/json",
-					},
-					body: JSON.stringify({
-						email: formData.email,
-						subject: formData.thread,
-						message: formData.message,
-					}),
-				},
-			);
-			await response.json();
-			const res = await response.json();
-			if (res.status === "success") setIsSuccess(true);
-		} catch (error) {
-			console.log(error);
-		}
-	};
+	const { onSubmit, isSuccess } = useContact();
 
 	return (
 		<main className="w-full min-h-screen bg-white flex flex-col">

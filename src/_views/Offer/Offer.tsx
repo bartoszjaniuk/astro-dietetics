@@ -1,4 +1,3 @@
-import { ModalProvider } from "@/providers/ModalProvider";
 import React from "react";
 import { Introduction } from "./components/Introduction";
 import { StripWithIcons } from "./components/StripWithIcons";
@@ -15,9 +14,5 @@ const Content = () => {
 };
 
 export const Offer = () => {
-	return (
-		<ModalProvider>
-			<Content />
-		</ModalProvider>
-	);
+	return <Content />;
 };

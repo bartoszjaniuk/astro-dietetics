@@ -1,4 +1,3 @@
-import { ModalProvider } from "@/providers/ModalProvider";
 import { Introduction } from "./components/Introduction";
 import { Individual } from "./components/Individual";
 import { Couples } from "./components/Couples";
@@ -34,9 +33,5 @@ const Content = () => {
 };
 
 export const PriceList = () => {
-	return (
-		<ModalProvider>
-			<Content />
-		</ModalProvider>
-	);
+	return <Content />;
 };

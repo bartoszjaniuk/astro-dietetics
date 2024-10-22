@@ -50,17 +50,31 @@ export const Input = ({
 				</label>
 				{required ? <span className="text-red-700">*</span> : null}
 			</div>
-			<input
-				type={type}
-				className={cn(
-					"flex h-10 xl:h-9 w-full rounded-md border border-neutral-200 bg-transparent px-1 py-1 xl:text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-primary placeholder:text-neutral-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-neutral-950 disabled:cursor-not-allowed disabled:opacity-50 bg-white",
-					className,
-				)}
-				id={id}
-				aria-invalid={hasError}
-				{...props}
-				{...(register && register(name, rules))}
-			/>
+
+			{isTextArea ? (
+				<textarea
+					className={cn(
+						"flex h-16 xl:max-h-20 w-full rounded-md border border-neutral-200 bg-transparent px-1 py-1 xl:text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-primary placeholder:text-neutral-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-neutral-950 disabled:cursor-not-allowed disabled:opacity-50 bg-white",
+						className,
+					)}
+					id={id}
+					aria-invalid={hasError}
+					{...props}
+					{...(register && register(name, rules))}
+				/>
+			) : (
+				<input
+					type={type}
+					className={cn(
+						"flex h-10 xl:h-9 w-full rounded-md border border-neutral-200 bg-transparent px-1 py-1 xl:text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-primary placeholder:text-neutral-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-neutral-950 disabled:cursor-not-allowed disabled:opacity-50 bg-white",
+						className,
+					)}
+					id={id}
+					aria-invalid={hasError}
+					{...props}
+					{...(register && register(name, rules))}
+				/>
+			)}
 			{hasError ? (
 				<p className="text-red-700 text-sm">{errors[name]?.message}</p>
 			) : null}

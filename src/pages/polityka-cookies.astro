@@ -1,0 +1,11 @@
+---
+import Layout from "@/_ui/Layout.astro";
+import { Cookies } from "@/_views/Cookies/Cookies";
+---
+
+<Layout
+	title="Gabinet Dietetyczny UMAMI - mgr Aleksandra Kajstura-Janiuk - Polityka cookies"
+	description="Drogi uzytkowniku Kiedy wchodzisz na strony naszych witryn, na dysku Twojego komputera mogą być zapisywane tzw. ciasteczka (ang. cookies), czyli niewielkie pliki tekstowe wysyłane przez nasz serwer albo serwisy, do których odwołujemy się w naszych witrynach, np. pokazując multimedia. Ciasteczka i podobne technologie używane są w witrynach internetowych przede wszystkim ze względu na wygodę użytkowników, m.in po to, by jak najlepiej dostosować treści i funkcje witryny do ich potrzeb i oczekiwań, a także w celach statystycznych."
+>
+	<Cookies client:load />
+</Layout>

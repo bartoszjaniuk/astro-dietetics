@@ -1,7 +1,11 @@
-import { SlideX } from "@/animations/SlideX";
-import { SlideY } from "@/animations/SlideY";
-import { LinkButton } from "@/_views/Home/components/LinkButton";
+import * as React from "react";
 import { Button } from "@/_views/Home/components/Button";
+import { Dialog } from "@/components/Dialog/Dialog";
+import {
+	ContactForm,
+	contactFormDefaultValues,
+} from "@/_views/shared/components/ContactForm";
+import { useContact } from "@/hooks/useContact";
 
 const individuals = [
 	{
@@ -54,27 +58,16 @@ type Props = {
 	title: string;
 	imgSrc: string;
 	items: string[];
+	open: VoidFunction;
+	setThread: (thread: string) => void;
 };
 
-{
-	/* <section className="min-h-80 w-full relative container responsive-padding mx-auto flex items-center z-[5]">
-<span className="opacity-20 fixed left-[0%] top-[0%] w-full h-full [background-image:url('assets/breakfast.jpg')] xl:bg-no-repeat xl:bg-cover " />
+const Card = ({ title, items, imgSrc, open, setThread }: Props) => {
+	const handleOpen = () => {
+		setThread(`Wybieram: ${title}`);
+		open();
+	};
 
-<h2 className="text-4xl">{text}</h2>
-</section> */
-}
-
-/* <div className="border-r-[1px] border-r-primary">
-<div className="w-72 h-72 absolute -right-1/2 top-1/2 -translate-y-1/2 bg-white rounded-[100%] z-10">
-	<img
-		src={imgSrc}
-		alt=""
-		className="w-full h-full object-cover border-secondary rounded-[100%]"
-	/>
-</div>
-</div> */
-
-const Card = ({ title, items, imgSrc }: Props) => {
 	return (
 		<div className="min-h-full lg:min-h-[630px] rounded-md bg-white w-full shadow-lg relative">
 			<div className="hidden lg:block lg:w-72 lg:h-72 absolute lg:left-0 lg:top-1/2 lg:-translate-y-1/2 bg-white rounded-[100%] z-10">
@@ -104,7 +97,10 @@ const Card = ({ title, items, imgSrc }: Props) => {
 						</li>
 					))}
 				</ul>
-				<Button className="w-full xl:w-fit xl:text-xl xl:py-4 xl:px-8">
+				<Button
+					className="w-full xl:w-fit xl:text-xl xl:py-4 xl:px-8"
+					onClick={handleOpen}
+				>
 					Wybierz dietę
 				</Button>
 			</div>
@@ -113,15 +109,32 @@ const Card = ({ title, items, imgSrc }: Props) => {
 };
 
 export const DietsList = () => {
+	const [isOpen, setIsOpen] = React.useState(false);
+	const [thread, setThread] = React.useState("");
+	const onOpen = () => setIsOpen(true);
+	const onClose = () => setIsOpen(false);
+	const { onSubmit } = useContact();
 	return (
-		<section className="w-full h-full bg-softGray py-8 lg:py-0 relative">
+		<section
+			className="w-full h-full bg-softGray py-8 lg:py-0 relative"
+			id="jadłospisy"
+		>
 			<div className="container responsive-padding mx-auto">
 				<div className="py-8 grid grid-cols-1 xl:grid-cols-2 gap-4 ">
 					{individuals.map((item, i) => (
-						<Card key={i} {...item} />
+						<Card key={i} open={onOpen} setThread={setThread} {...item} />
 					))}
 				</div>
 			</div>
+			<Dialog isOpen={isOpen} onClose={onClose}>
+				<div className="flex flex-col gap-4">
+					<h5 className="text-3xl text-primary">Formularz kontaktowy</h5>
+					<ContactForm
+						onSubmit={onSubmit}
+						defaultValues={{ ...contactFormDefaultValues, thread }}
+					/>
+				</div>
+			</Dialog>
 		</section>
 	);
 };
