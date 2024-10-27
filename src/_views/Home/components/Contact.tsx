@@ -52,7 +52,7 @@ const Content = () => {
 
   return (
     <main
-      id="napisz-do-mnie"
+      id="formularz-kontaktowy"
       className={`min-h-full flex flex-col justify-center items-center z-10 bg-white py-8 gap-10 lg:gap-16 ${classNameAfter} ${classNameBefore}`}
     >
       <AbstractShape className="left-24 -top-40 absolute w-48 opacity-80" />
