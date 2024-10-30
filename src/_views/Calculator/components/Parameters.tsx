@@ -61,9 +61,9 @@ export const Parameters = ({ onNextStep }: { onNextStep: VoidFunction }) => {
     onNextStep();
   };
   return (
-    <div className="flex flex-col gap-8 text-center max-w-2xl">
+    <div className="flex flex-col gap-8 text-center w-full md:min-w-[600px]">
       <h5 className="text-3xl">Twoje parametry</h5>
-      <form className="w-full md:min-w-[600px]">
+      <form className="w-full">
         <Input
           required
           errors={errors}

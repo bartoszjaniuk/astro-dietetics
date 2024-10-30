@@ -2,6 +2,7 @@ import { Introduction } from "./components/Introduction";
 import { Individual } from "./components/Individual";
 import { Couples } from "./components/Couples";
 import { LinkButton } from "../Home/components/LinkButton";
+import { useInitMailer } from "../Home/hooks/useInitMailer";
 
 const Content = () => {
   return (
@@ -33,5 +34,7 @@ const Content = () => {
 };
 
 export const PriceList = () => {
+  useInitMailer();
+
   return <Content />;
 };

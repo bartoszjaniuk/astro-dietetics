@@ -6,6 +6,7 @@ import { Activity } from "./components/Activity";
 import { CalculatorProvider, useCalculatorData } from "./context/Calculator";
 import { Summary } from "./components/Summary";
 import { Layout } from "./components/Layout";
+import { useInitMailer } from "../Home/hooks/useInitMailer";
 
 const Content = () => {
   const { navigationData } = useCalculatorData();
@@ -30,6 +31,8 @@ const Content = () => {
 };
 
 export const Calculator = () => {
+  useInitMailer();
+
   return (
     <CalculatorProvider>
       <Content />
