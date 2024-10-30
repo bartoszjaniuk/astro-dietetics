@@ -9,8 +9,6 @@ import { Layout } from "./components/Layout";
 import { useInitMailer } from "../Home/hooks/useInitMailer";
 
 const Content = () => {
-  const { navigationData } = useCalculatorData();
-  console.log(navigationData);
   const [step, setStep] = React.useState(0);
   const onNextStep = () => {
     setStep(step + 1);
