@@ -10,7 +10,7 @@ const variantMap = {
   default:
     "text-white bg-primary enabled:hover:text-primary enabled:hover:bg-white enabled:hover:border-primary",
   inverted:
-    "text-primary bg-white enabled:hover:text-white enabled:hover:bg-primary enabled:hover:border-white",
+    "border border-primary text-primary bg-white enabled:hover:text-white enabled:hover:bg-primary enabled:hover:border-white",
 };
 
 const buttonSize = {
@@ -30,7 +30,7 @@ export const Button = ({
 }: Props) => {
   return (
     <button
-      className={`w-fit border border-transparent rounded-sm cursor-pointer transition-all disabled:opacity-50 disabled:cursor-not-allowed  ${!isWithoutAnimation ? "hover:scale-105" : ""} ${buttonSize[size]} ${variantMap[variant]} ${className}`}
+      className={`w-fit border  rounded-sm cursor-pointer transition-all disabled:opacity-50 disabled:cursor-not-allowed  ${!isWithoutAnimation ? "hover:scale-105" : ""} ${buttonSize[size]} ${variantMap[variant]} ${className}`}
       onClick={onClick}
       {...rest}
     >

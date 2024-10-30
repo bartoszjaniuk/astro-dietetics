@@ -1,0 +1,12 @@
+---
+import { Calculator } from "@/_views/Calculator/Calculator";
+import LayoutBase from "@/_ui/LayoutBase.astro";
+---
+
+<LayoutBase
+	title="Kalkulator kalorii UMAMI - Oblicz zapotrzebowanie kaloryczne z UMAMI"
+	description="Ile kalorii jeść w ciągu dnia? Uzupełnij kalkulator kalorii i zapotrzebowania, a wynik uzyskasz w ciągu minuty!"
+>
+<Calculator client:only="react"/>
+
+</Layout>

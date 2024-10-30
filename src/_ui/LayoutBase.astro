@@ -1,0 +1,34 @@
+---
+import "../styles/globals.css";
+import BaseSeo from "../components/BaseSeo/BaseSeo.astro";
+import { Cookie } from "../components/Cookie/Cookie";
+
+interface Props {
+	title: string;
+	description: string;
+	keywords?: string;
+}
+
+const { title, description, keywords } = Astro.props;
+---
+
+<!doctype html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" href="/android-chrome-512x512.png" />
+		<link rel="icon" href="/android-chrome-192x192.png" />
+		<link rel="icon" href="/favicon.ico" sizes="any" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<meta name="generator" content={Astro.generator} />
+		<BaseSeo title={title} description={description} keywords={keywords} />
+	</head>
+	<body>
+		<div class="min-h-screen">
+			<slot />
+			<Cookie client:load />
+		</div>
+	</body>
+</html>
