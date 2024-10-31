@@ -18,14 +18,14 @@ export const Layout = ({
 	);
 
 	return (
-		<main className="relative h-full w-full bg-white grid grid-cols-1 gap-4 lg:gap-0 lg:grid-cols-[2fr_1fr]">
+		<main className="relative min-h-full w-full bg-red-300 grid grid-cols-1 gap-4 lg:gap-0 lg:grid-cols-[2fr_1fr]">
 			<span
 				style={{ width: `${percentage}%` }}
 				className="w-full h-6  bg-primary font-lato text-white absolute top-0 left-0 z-50 text-start responsive-padding-screen"
 			>
 				{percentage}%
 			</span>
-			<section className="bg-white min-h-full w-full responsive-padding-screen flex justify-center pt-16 relative">
+			<section className="bg-blue-400 min-h-full w-full responsive-padding-screen flex justify-center pt-16 relative">
 				<img
 					src="/assets/umami-logo.jpeg"
 					alt=""
