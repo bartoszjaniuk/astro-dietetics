@@ -32,7 +32,7 @@ export const Goal = ({ onNextStep }: { onNextStep: VoidFunction }) => {
 	};
 
 	return (
-		<div className="flex flex-col gap-8 text-center max-w-2xl bg-purple-400 min-h-full">
+		<div className="flex flex-col gap-8 text-center max-w-2xl bg-purple-400 h-full">
 			<h5 className="text-3xl">Jaki jest Twój cel?</h5>
 			<form className="w-full md:min-w-[600px] h-full">
 				<ul className="flex flex-col gap-2 list-none">
