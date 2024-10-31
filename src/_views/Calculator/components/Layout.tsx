@@ -18,7 +18,7 @@ export const Layout = ({
 	);
 
 	return (
-		<main className="relative min-h-full h-screen w-full bg-white grid grid-cols-1 gap-4 lg:gap-0 lg:grid-cols-[2fr_1fr]">
+		<main className="relative min-h-screen w-full bg-white grid grid-cols-1 gap-4 lg:gap-0 lg:grid-cols-[2fr_1fr]">
 			<span
 				style={{ width: `${percentage}%` }}
 				className="w-full h-6  bg-primary font-lato text-white absolute top-0 left-0 z-50 text-start responsive-padding-screen"
