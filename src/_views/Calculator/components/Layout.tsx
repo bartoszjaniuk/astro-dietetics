@@ -18,14 +18,14 @@ export const Layout = ({
 	);
 
 	return (
-		<main className="relative h-full w-full bg-red-300 grid grid-cols-1 gap-4 lg:gap-0 lg:grid-cols-[2fr_1fr]">
+		<main className="relative min-h-full h-screen w-full bg-white grid grid-cols-1 gap-4 lg:gap-0 lg:grid-cols-[2fr_1fr]">
 			<span
 				style={{ width: `${percentage}%` }}
 				className="w-full h-6  bg-primary font-lato text-white absolute top-0 left-0 z-50 text-start responsive-padding-screen"
 			>
 				{percentage}%
 			</span>
-			<section className="bg-blue-400 h-full w-full responsive-padding-screen flex justify-center pt-16 relative">
+			<section className="bg-white min-h-full w-full responsive-padding-screen flex justify-center pt-16 relative">
 				<img
 					src="/assets/umami-logo.jpeg"
 					alt=""
@@ -40,7 +40,7 @@ export const Layout = ({
 						<img src="/assets/arrowLeft.svg" alt="Wstecz" />
 					</button>
 				) : null}
-				<div className="pt-8 w-full min-h-full">{children}</div>
+				<div className="pt-8 w-full h-full">{children}</div>
 			</section>
 			<section className="bg-secondary min-h-full w-full flex items-center justify-center">
 				<div className="w-full px-4 pt-4 xl:px-0 xl:pt-0 xl:w-[500px]">
