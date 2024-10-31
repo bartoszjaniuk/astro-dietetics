@@ -25,7 +25,7 @@ export const Layout = ({
 			>
 				{percentage}%
 			</span>
-			<section className="bg-white min-h-full w-full responsive-padding-screen flex justify-center pt-16 relative">
+			<section className="bg-white h-full w-full responsive-padding-screen flex justify-center pt-16 relative">
 				<img
 					src="/assets/umami-logo.jpeg"
 					alt=""
@@ -42,7 +42,7 @@ export const Layout = ({
 				) : null}
 				<div className="pt-8 w-full h-fit">{children}</div>
 			</section>
-			<section className="bg-secondary min-h-full w-full flex items-center justify-center">
+			<section className="bg-secondary h-full w-full flex items-center justify-center">
 				<div className="w-full px-4 pt-4 xl:px-0 xl:pt-0 xl:w-[500px]">
 					<img
 						src={calculatorBackgroundImageMap[step]}
