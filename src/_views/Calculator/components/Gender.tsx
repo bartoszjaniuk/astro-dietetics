@@ -30,7 +30,7 @@ export const Gender = ({ onNextStep }: { onNextStep: VoidFunction }) => {
 	};
 
 	return (
-		<div className="flex flex-col gap-8 text-center max-w-2xl h-full">
+		<div className="flex flex-col gap-8 text-center max-w-2xl">
 			<h1 className="text-6xl ">Kalkulator kalorii UMAMI</h1>
 			<p className="text-xl">
 				Kalkulator kalorii to świetne narzędzie, które pozwoli Ci poznać Twoje
