@@ -40,7 +40,7 @@ export const Layout = ({
 						<img src="/assets/arrowLeft.svg" alt="Wstecz" />
 					</button>
 				) : null}
-				<div className="pt-8 w-full h-full bg-slate-900">{children}</div>
+				<div className="pt-8 w-full h-fit">{children}</div>
 			</section>
 			<section className="bg-secondary min-h-full w-full flex items-center justify-center">
 				<div className="w-full px-4 pt-4 xl:px-0 xl:pt-0 xl:w-[500px]">
