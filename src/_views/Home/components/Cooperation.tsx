@@ -63,7 +63,7 @@ const Content = () => {
       <SlideY
         component="h2"
         from="bottom"
-        className="text-5xl font-black text-primary text-center container responsive-padding mx-auto"
+        className="text-3xl font-black text-primary text-center container responsive-padding mx-auto"
       >
         Jak rozpocząć ze mną współpracę w czterech krokach
       </SlideY>
@@ -81,7 +81,7 @@ const Content = () => {
         </div>
       </div>
       <LinkButton
-        className="w-full lg:w-fit container responsive-padding mx-auto text-center"
+        // className="w-full lg:w-fit container responsive-padding mx-auto text-center"
         navigateTo="#napisz-do-mnie"
         text="Napisz do mnie"
       />

@@ -140,7 +140,7 @@ export const ThreeCards = () => {
       <SlideY
         component="h2"
         from="bottom"
-        className="text-5xl font-black text-primary text-center container responsive-padding mx-auto pt-16 xl:pt-0"
+        className="text-3xl font-black text-primary text-center container responsive-padding mx-auto pt-16 xl:pt-0"
       >
         Usługi dostosowane do Twoich potrzeb
       </SlideY>

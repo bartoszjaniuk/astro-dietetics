@@ -14,26 +14,32 @@ const Content = () => {
   return (
     <main className="w-full min-h-screen bg-white flex flex-col">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-32 container responsive-padding mx-auto h-full">
-        <section className="flex flex-col gap-6 bg-white py-8 lg:py-16 xl:py-32 relative">
-          <SlideY component="h2" from="top" className="text-5xl xl:text-5xl">
+        <section className="flex flex-col gap-4 bg-white py-8 lg:py-16 xl:py-32 relative">
+          <SlideY
+            component="h1"
+            from="top"
+            className="text-6xl text-primary text-nowrap"
+          >
             Skontaktuj się ze mną
           </SlideY>
 
           <SlideX
             component="p"
             from="left"
-            className="font-light text-primary font-lato  text-2xl lg:text-2xl xl:text-2xl"
+            className="font-light text-primary font-lato text-2xl"
           >
             Chciałbyś zrobić pierwszy krok w kierunku sylwetki marzeń? Poprawić
             wyniki badań i stan swojego zdrowia? <br /> Masz pytania i
             wątpliwości jak schudnąć lub przytyć? <br /> Śmiało, napisz do mnie!
             Odpowiem tak szybko, jak to możliwe.
           </SlideX>
-          <h5>Formularz kontaktowy</h5>
+          <h5 className="text-xl text-primary font-bold">
+            Formularz kontaktowy
+          </h5>
           <ContactForm onSubmit={onSubmit} />
         </section>
         <section className="h-full py-8 lg:h-5/6 bg-primary text-white container responsive-padding mx-auto flex flex-col gap-4 xl:pl-32 lg:pt-32 relative rounded-xl lg:[border-radius:30%_70%_70%_30%/30%_30%_70%_70%]">
-          <AbstractShape className="w-16 absolute top-32 -right-32" />
+          <AbstractShape className="w-16 absolute top-32 -right-16" />
 
           <div className="flex flex-col gap-4">
             <p className="font-medium text-2xl">Gabinet Dietetyczny UMAMI</p>

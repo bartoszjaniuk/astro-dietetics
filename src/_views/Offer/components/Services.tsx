@@ -102,8 +102,10 @@ export const Services = () => {
             from="left"
             className="text-3xl  text-primary text-left lg:text-left"
           >
-            Nie wiesz co wybrać? Skontaktuj się ze mną i wszystko razem
-            ustalimy.
+            Nie wiesz co wybrać?{" "}
+            <span className="font-bold">
+              Skontaktuj się ze mną i wszystko razem ustalimy.
+            </span>
           </SlideX>
           <ServicesList />
           <LinkButton

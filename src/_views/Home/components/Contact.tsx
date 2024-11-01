@@ -60,7 +60,9 @@ const Content = () => {
       <AbstractShape className="right-48 top-32 absolute w-16 opacity-80" />
       <div className="container responsive-padding mx-auto flex flex-col gap-10">
         <div className="text-center flex flex-col gap-4">
-          <h2 className="text-primary text-5xl">Skontaktuj się ze mną</h2>
+          <h2 className="text-primary text-3xl font-black 2xl:text-5xl">
+            Skontaktuj się ze mną
+          </h2>
           <h5 className="text-xl">
             Potrzebujesz specjalistycznej porady? Napisz do mnie za pomocą
             formularza lub zadzwoń.
@@ -75,7 +77,7 @@ const Content = () => {
             />
           </div>
           <div className="w-full flex flex-col gap-4 justify-center">
-            <h3 className="text-5xl text-primary py-4">Napisz do mnie</h3>
+            <h3 className="text-3xl text-primary py-4">Napisz do mnie</h3>
             <ContactForm onSubmit={onSubmit} />
             {successMessage && (
               <p className="text-green-700">{successMessage}</p>

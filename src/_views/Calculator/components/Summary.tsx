@@ -8,9 +8,9 @@ import { LinkButton } from "@/_views/Home/components/LinkButton";
 export const Summary = () => {
   const { navigationData } = useCalculatorData();
   return (
-    <div className="flex flex-col gap-8 w-full max-w-2xl md:min-w-[600px] relative">
-      <AbstractShape className="absolute -right-56 top-0 w-16" />
-      <AbstractShape className="absolute -left-72 -bottom-96 w-56" />
+    <div className="flex flex-col gap-8 w-full max-w-2xl md:min-w-[600px] relative h-full">
+      <AbstractShape className="absolute -right-44 top-0 w-16" />
+      <AbstractShape className="absolute -left-72 bottom-96 w-56" />
 
       <div className="pt-4">
         <h5 className="text-3xl pb-8">Wynik zapotrzebowania:</h5>
@@ -25,13 +25,13 @@ export const Summary = () => {
 
       <div className="flex flex-col gap-2 md:flex-row md:gap-4">
         <LinkButton
-          className="w-full md:w-fit container responsive-padding mx-auto text-center"
-          navigateTo="/#napisz-do-mnie"
+          className="w-full text-center"
+          navigateTo="/#formularz-kontaktowy"
           text="Napisz do mnie"
         />
         <LinkButton
           variant="inverted"
-          className="w-full md:w-fit container responsive-padding mx-auto text-center"
+          className="w-full  text-center"
           navigateTo="/kalkulator"
           text="Oblicz ponownie"
         />

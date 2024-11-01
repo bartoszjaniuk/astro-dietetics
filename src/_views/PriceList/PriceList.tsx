@@ -13,12 +13,12 @@ const Content = () => {
         <span className="opacity-20 fixed left-[0%] top-[0%] w-full h-full [background-image:url('/assets/breakfast.jpg')] xl:bg-no-repeat xl:bg-cover" />
 
         <div className="flex flex-col gap-6 text-center">
-          <h2 className="text-5xl">Dieta online bez wychodzenia z domu</h2>
-          <p className="text-3xl">
-            W zapracowanym świecie trudno zadbać o siebie. <br /> Dlatego
-            przygotowałam dla moich pacjentów wygodną opcję diety i konsultacji
-            online, ale jeśli wolisz spotkać się ze mną stacjonarnie, to też
-            jest taka możliwość!
+          <h1 className="text-5xl">Dieta online bez wychodzenia z domu</h1>
+          <p className="text-2xl">
+            W zapracowanym świecie trudno zadbać o siebie. Dlatego przygotowałam
+            dla moich pacjentów wygodną opcję diety i konsultacji online, ale
+            jeśli wolisz spotkać się ze mną stacjonarnie, to też jest taka
+            możliwość!
           </p>
           <LinkButton
             className="self-center text-xl md:text-2xl"

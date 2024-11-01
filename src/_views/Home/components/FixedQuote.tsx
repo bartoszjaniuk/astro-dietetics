@@ -8,7 +8,7 @@ export const FixedQuote = () => {
     <section className="min-h-80 w-full relative container responsive-padding mx-auto flex items-center z-[5]">
       <span className="opacity-20 fixed left-[0%] top-[0%] w-full h-full [background-image:url('/assets/breakfast.jpg')] xl:bg-no-repeat xl:bg-cover " />
 
-      <h2 className="text-4xl">{text}</h2>
+      <h2 className="text-2xl text-center w-full">{text}</h2>
     </section>
   );
 };

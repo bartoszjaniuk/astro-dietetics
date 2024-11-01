@@ -37,7 +37,7 @@ export const Navbar = ({ currentPath }: Props) => {
             const isActive = currentPath === makePathFromLink(link.path);
             return (
               <a
-                className={`relative text-xl md:text-2xl w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-500 after:origin-center whitespace-nowrap   ${
+                className={`relative text-xl 2xl:text-2xl w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-500 after:origin-center whitespace-nowrap   ${
                   isActive ? "text-primary" : null
                 }`}
                 key={index}
@@ -50,7 +50,7 @@ export const Navbar = ({ currentPath }: Props) => {
         </div>
         <div className="gap-4 hidden xl:flex items-center">
           <Button
-            className="rounded-sm px-4 py-2 text-xl xl:text-xl xl:px-4 xl:py-2"
+            className="rounded-sm px-4 py-2 text-xl xl:text-xl xl:px-4 xl:py-2 text-nowrap"
             onClick={handleNavigateToContactForm}
           >
             Napisz do mnie

@@ -23,7 +23,7 @@ export const CalculatorIntro = () => {
         <div className="w-full flex flex-col gap-8 xl:gap-16">
           <SlideX
             component="h1"
-            className="text-4xl md:text-6xl xl:text-7xl flex flex-col gap-3"
+            className="text-4xl md:text-6xl 2xl:text-6xl flex flex-col gap-3"
           >
             <p>
               Jaka
@@ -36,7 +36,7 @@ export const CalculatorIntro = () => {
               odpowiedia?
             </p>
           </SlideX>
-          <SlideX from="right" component="p" className="text-2xl xl:text-3xl">
+          <SlideX from="right" component="p" className="text-xl 2xl:text-3xl">
             Skorzystaj z kalkulatora, aby dowiedzieć się, jakie obecnie masz
             zapotrzebowanie kaloryczne. Po wpisaniu swoich danych dowiesz się
             ile powinieneś jeść, aby osiągnąć swój cel.

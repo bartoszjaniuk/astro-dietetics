@@ -45,7 +45,10 @@ export const Input = ({
   return (
     <div className="flex flex-col gap-1">
       <div className="flex">
-        <label htmlFor={name} className="text-base md:text-xl text-primary">
+        <label
+          htmlFor={name}
+          className="text-base md:text-lg 2xl:text-xl text-primary"
+        >
           {label}
         </label>
         {required ? <span className="text-red-700">*</span> : null}
