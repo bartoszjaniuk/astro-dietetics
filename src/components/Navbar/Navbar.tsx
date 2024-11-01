@@ -67,7 +67,7 @@ export const Navbar = ({ currentPath }: Props) => {
           <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
             <a href={INSTAGRAM_URL} className="cursor-pointer">
               <img
-                className="lg:w-[44px] xl:w-[24px]"
+                className="lg:w-[32px] xl:w-[24px]"
                 src="/assets/ig.svg"
                 alt="Profil na Instagram"
               />
@@ -76,7 +76,7 @@ export const Navbar = ({ currentPath }: Props) => {
           <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
             <a href={FACEBOOK_URL} className="cursor-pointer">
               <img
-                className="lg:w-[44px]  xl:w-[24px]"
+                className="lg:w-[32px]  xl:w-[24px]"
                 src="/assets/fb.svg"
                 alt="Profil na Facebook"
               />
@@ -85,7 +85,7 @@ export const Navbar = ({ currentPath }: Props) => {
           <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
             <a href={TIKTOK_URL} className="cursor-pointer">
               <img
-                className="lg:w-[44px]  xl:w-[24px]"
+                className="lg:w-[32px]  xl:w-[24px]"
                 src="/assets/tiktok.svg"
                 alt="Profil na TikTok"
               />
