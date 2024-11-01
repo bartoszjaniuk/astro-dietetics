@@ -5,6 +5,7 @@ import {
   type ContactFormFieldValues,
 } from "@/_views/shared/components/ContactForm";
 import { Alert } from "./Alert";
+import { useContact } from "@/hooks/useContact";
 
 const classNameAfter =
   'after:absolute after:content-[""] after:w-full after:h-full after:top-0 after:left-0 after:-z-[1] after:bg-white  md:after:[clip-path:polygon(0%_0%,100%_0%,100%_75%,0%_100%)]';
@@ -13,50 +14,7 @@ const classNameBefore =
   'before:absolute before:content-[""] before:w-full before:h-full before:top-0 before:left-0 before:-z-[1] before:bg-softGray';
 
 const Content = () => {
-  const [isLoading, setIsLoading] = React.useState(false);
-  const [isSuccess, setIsSuccess] = React.useState(false);
-  const [successMessage, setSuccessMessage] = React.useState("");
-
-  const handleClearMessage = () => {
-    setSuccessMessage("");
-    setIsSuccess(false);
-  };
-
-  React.useEffect(() => {
-    if (isSuccess) {
-      setSuccessMessage("Wiadomość została wysłana.");
-      setTimeout(() => {
-        handleClearMessage();
-      }, 7000);
-    }
-  }, [isSuccess]);
-
-  const onSubmit = async (formData: ContactFormFieldValues) => {
-    setIsLoading(true);
-    try {
-      const response = await fetch(
-        "https://umami-get-mailed.onrender.com/api/v1/email/send-email",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify({
-            email: formData.email,
-            subject: formData.thread,
-            message: formData.message,
-          }),
-        }
-      );
-      const res = await response.json();
-      if (res.status === "success") setIsSuccess(true);
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  const { successMessage, isLoading, onSubmit, onClearMessage } = useContact();
 
   return (
     <main
@@ -86,7 +44,7 @@ const Content = () => {
           </div>
           <div className="w-full flex flex-col justify-center">
             {successMessage ? (
-              <Alert onClick={handleClearMessage} message={successMessage} />
+              <Alert onClick={onClearMessage} message={successMessage} />
             ) : null}
             <h3 className="text-3xl text-primary py-4">Napisz do mnie</h3>
 

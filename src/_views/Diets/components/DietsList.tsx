@@ -6,6 +6,7 @@ import {
   contactFormDefaultValues,
 } from "@/_views/shared/components/ContactForm";
 import { useContact } from "@/hooks/useContact";
+import { Alert } from "@/_views/Home/components/Alert";
 
 const individuals = [
   {
@@ -113,7 +114,7 @@ export const DietsList = () => {
   const [thread, setThread] = React.useState("");
   const onOpen = () => setIsOpen(true);
   const onClose = () => setIsOpen(false);
-  const { onSubmit } = useContact();
+  const { onSubmit, isLoading, onClearMessage, successMessage } = useContact();
   return (
     <section
       className="w-full h-full bg-softGray py-8 lg:py-0 relative"
@@ -127,9 +128,13 @@ export const DietsList = () => {
         </div>
       </div>
       <Dialog isOpen={isOpen} onClose={onClose}>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 w-full">
+          {successMessage ? (
+            <Alert onClick={onClearMessage} message={"test"} />
+          ) : null}
           <h5 className="text-3xl text-primary">Formularz kontaktowy</h5>
           <ContactForm
+            isLoading={isLoading}
             onSubmit={onSubmit}
             defaultValues={{ ...contactFormDefaultValues, thread }}
           />
