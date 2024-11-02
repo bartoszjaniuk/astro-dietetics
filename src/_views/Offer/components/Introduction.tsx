@@ -12,21 +12,25 @@ export const Introduction = () => {
   return (
     <section className="w-full h-full bg-white py-8 lg:py-0">
       <div className="flex flex-col-reverse lg:flex-row container responsive-padding mx-auto">
-        <div className="flex-1 flex flex-col gap-6 items-center lg:items-start lg:py-8 max-w-[60%]">
-          <SlideY component="h1" from="top" className="text-6xl pt-8">
+        <div className="flex-1 flex flex-col gap-4 items-center lg:items-start lg:py-8 lg:max-w-[60%]">
+          <SlideY
+            component="h1"
+            from="top"
+            className="text-4xl lg:text-6xl pt-8"
+          >
             WSPÓŁPRACA DIETETYCZNA.
           </SlideY>
           <SlideX
             component="h2"
             from="left"
-            className="text-4xl text-primary text-left lg:text-left"
+            className="text-2xl lg:text-3xl text-primary text-left lg:text-left"
           >
             Zrób pierwszy krok już dziś, nie jutro.
           </SlideX>
           <SlideX
             component="p"
             from="left"
-            className="font-light text-primary font-lato lg:text-left text-2xl lg:text-2xl 2xl:text-3xl"
+            className="font-light text-primary font-lato lg:text-left text-xl lg:text-2xl 2xl:text-3xl"
           >
             Pomogę Ci poprawić swoją sylwetkę i samopoczucie bez wielkich
             wyrzeczeń, nawet jeśli zmagasz się z jakimiś problemami zdrowotnymi.
