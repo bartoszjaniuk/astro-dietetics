@@ -18,7 +18,7 @@ const Content = () => {
           <SlideY
             component="h1"
             from="top"
-            className="text-6xl text-primary text-nowrap"
+            className="text-6xl text-primary lg:text-nowrap"
           >
             Skontaktuj się ze mną
           </SlideY>

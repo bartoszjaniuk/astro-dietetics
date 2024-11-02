@@ -11,14 +11,14 @@ export const Introduction = () => {
       <div className="container responsive-padding mx-auto">
         <div className="flex-1 flex flex-col gap-6 lg:py-8 text-center">
           <SlideY
-            component="h1"
+            component="h3"
             from="top"
-            className="text-4xl md:text-6xl lg:leading-[4rem]"
+            className="text-3xl lg:text-6xl lg:leading-[4rem]"
           >
             Osiągnij wymarzoną sylwetkę i <br /> doskonałe samopoczucie pod{" "}
             <br /> okiem wykwalifikowanego <br /> dietetyka.
           </SlideY>
-          <SlideX component="p" from="right" className="text-2xl text-center">
+          <SlideX component="p" from="right" className="text-center">
             Umami to miejsce, gdzie każdego dnia rozprawiam się ze złymi
             nawykami żywieniowymi. <br /> W tym miejscu pomogę Ci je zdrowo i
             skutecznie wdrożyć w życie. <br /> Tak jak lubisz. Bez wyrzeczeń,
