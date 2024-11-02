@@ -17,9 +17,9 @@ const couples = [
     price: "200 zł",
     items: [
       "Wywiad zdrowotny i żywieniowy",
-      "Pomiar na analizatorze składu masy ciał",
-      "Omówienie dotychczasowej diety i błędów żywieniowyc",
-      "Edukacja żywieniowa i indywidualne zalecenia.",
+      "Pomiar na analizatorze składu masy ciała",
+      "Omówienie dotychczasowej diety i błędów żywieniowych",
+      "Edukacja żywieniowa i indywidualne zalecenia",
       "Koszt każdej kolejnej wizyty kontrolnej to 150 zł",
     ],
   },
