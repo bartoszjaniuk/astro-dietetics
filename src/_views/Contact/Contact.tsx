@@ -6,10 +6,10 @@ import { AbstractShape } from "@/components/AbstractShape/AbstractShape";
 import * as React from "react";
 import { useContact } from "@/hooks/useContact";
 import { useInitMailer } from "../Home/hooks/useInitMailer";
+import { Alert } from "../Home/components/Alert";
 
 const Content = () => {
-  // TODO: handle isSuccess to display message
-  const { onSubmit, isSuccess } = useContact();
+  const { onSubmit, isLoading, onClearMessage, successMessage } = useContact();
 
   return (
     <main className="w-full min-h-screen bg-white flex flex-col">
@@ -33,10 +33,15 @@ const Content = () => {
             wątpliwości jak schudnąć lub przytyć? <br /> Śmiało, napisz do mnie!
             Odpowiem tak szybko, jak to możliwe.
           </SlideX>
-          <h5 className="text-xl text-primary font-bold">
-            Formularz kontaktowy
-          </h5>
-          <ContactForm onSubmit={onSubmit} />
+          <div className="flex flex-col gap-4 w-full">
+            {successMessage ? (
+              <Alert onClick={onClearMessage} message={"message"} />
+            ) : null}
+            <h5 className="text-xl text-primary font-bold">
+              Formularz kontaktowy
+            </h5>
+            <ContactForm isLoading={isLoading} onSubmit={onSubmit} />
+          </div>
         </section>
         <section className="h-full py-8 lg:h-5/6 bg-primary text-white container responsive-padding mx-auto flex flex-col gap-4 xl:pl-32 lg:pt-32 relative rounded-xl lg:[border-radius:30%_70%_70%_30%/30%_30%_70%_70%]">
           <AbstractShape className="w-16 absolute top-32 -right-16" />

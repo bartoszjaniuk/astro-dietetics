@@ -130,7 +130,7 @@ export const DietsList = () => {
       <Dialog isOpen={isOpen} onClose={onClose}>
         <div className="flex flex-col gap-4 w-full">
           {successMessage ? (
-            <Alert onClick={onClearMessage} message={"test"} />
+            <Alert onClick={onClearMessage} message={successMessage} />
           ) : null}
           <h5 className="text-3xl text-primary">Formularz kontaktowy</h5>
           <ContactForm
