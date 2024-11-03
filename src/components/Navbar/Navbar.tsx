@@ -26,7 +26,7 @@ export const Navbar = ({ currentPath }: Props) => {
       <nav className="container responsive-padding mx-auto h-24 flex items-center justify-between gap-16 relative z-50 ">
         <a href="/">
           <img
-            src="/assets/umami-logo.jpeg"
+            src="/assets/umami-logo.jpg"
             className="w-48 mr-4"
             alt="Gabinet Dietetyczny Umami logo"
           />

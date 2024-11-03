@@ -43,8 +43,8 @@ export const Introduction = () => {
           className={`flex-grow-1 xl:w-[30%] flex justify-center pt-8 ${before} ${after}`}
         >
           <img
-            src="/assets/offer-introduction.png"
-            alt="Landing Image"
+            src="/assets/pani-dietetyk-poza-bok.webp"
+            alt="Zdjęcie Pani Dietetyk ze skrzyżowanymi rękoma bokiem"
             className="object-contain w-auto max-w-full h-[600px] z-10"
           />
         </div>

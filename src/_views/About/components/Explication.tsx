@@ -6,8 +6,8 @@ export const Explication = () => {
     <div className="flex flex-col-reverse lg:flex-row lg:items-center bg-softGray container responsive-padding mx-auto gap-8 py-8">
       <div className="flex-grow-1 lg:w-1/2 lg:h-full lg:items-center flex justify-center">
         <img
-          src="/assets/about-avocado.png"
-          alt="Kobieta trzymająca w ręku avocado"
+          src="/assets/pani-dietetyk-z-avocado.png"
+          alt="Zdjęcie Pani Dietetyk trzymającej w ręku avocado"
           className="object-contain w-auto max-w-full h-full xl:h-[600px] rounded-full"
         />
       </div>

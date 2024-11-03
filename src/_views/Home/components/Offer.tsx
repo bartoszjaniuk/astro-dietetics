@@ -44,8 +44,8 @@ export const Offer = () => {
             style={{ borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%" }}
           >
             <img
-              src="/assets/offer.png"
-              alt="Landing Image"
+              src="/assets/pani-dietetyk-poza.webp"
+              alt="Zdjęcie Pani dietetyk w pozie ze skrzyżowanymi rękoma przodem"
               className="object-contain w-auto max-h-[100vh] max-w-full md:max-h-[80vh] lg:max-h-screen"
             />
           </div>

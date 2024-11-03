@@ -21,7 +21,7 @@ const diets: Diet[] = [
     clipPath: "[clip-path:polygon(0%_0%,100%_0%,100%_100%,0%_85%)]",
     title: "Dieta dla par",
     backgroundImage:
-      "[background-image:linear-gradient(to_right,_#3b2f29_0%,_#967968_51%,_#3b2f29_100%),_url('https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')]",
+      "[background-image:linear-gradient(to_right,_#3b2f29_0%,_#967968_51%,_#3b2f29_100%),_url('/assets/tortilla-z-kurczakiem.webp')]",
 
     details: {
       size: "2000 KCAL",
@@ -37,7 +37,7 @@ const diets: Diet[] = [
     clipPath: "[clip-path:polygon(0%_0%,100%_0%,100%_85%,0%_85%)]",
     title: "Dieta Indywidualna",
     backgroundImage:
-      "[background-image:linear-gradient(to_right,_#3b2f29_0%,_#967968_51%,_#3b2f29_100%),_url('https://images.pexels.com/photos/4964123/pexels-photo-4964123.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')]",
+      "[background-image:linear-gradient(to_right,_#3b2f29_0%,_#967968_51%,_#3b2f29_100%),_url('/assets/kanapka-z-ogorkiem.jpeg')]",
     details: {
       size: "Dieta Indywidualna",
       descriptions: [
@@ -52,7 +52,7 @@ const diets: Diet[] = [
     clipPath: "[clip-path:polygon(0%_0%,100%_0%,100%_85%,0%_100%)]",
     title: "Gotowe Jadłospisy",
     backgroundImage:
-      "[background-image:linear-gradient(to_right,_#3b2f29_0%,_#967968_51%,_#3b2f29_100%),_url('https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')]",
+      "[background-image:linear-gradient(to_right,_#3b2f29_0%,_#967968_51%,_#3b2f29_100%),_url('/assets/pamcakes.jpeg')]",
     details: {
       size: "1600 KCAL",
       descriptions: [

@@ -27,7 +27,7 @@ export const Layout = ({
       </span>
       <section className="bg-white h-full w-full responsive-padding-screen flex justify-center pt-16 relative">
         <img
-          src="/assets/umami-logo.jpeg"
+          src="/assets/umami-logo.jpg"
           alt=""
           className="w-48 absolute top-8 left-1/2 -translate-x-1/2"
         />

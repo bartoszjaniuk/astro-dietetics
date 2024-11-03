@@ -72,7 +72,7 @@ const ToggleButton = ({
   isOpen: boolean;
 }) => {
   return (
-    <button className="burger z-40" onClick={onClick}>
+    <button name="burger" className="burger z-40" onClick={onClick}>
       <span className={`${isOpen ? "opened" : ""} line`} />
       <span className={`${isOpen ? "opened" : ""} line`} />
       <span className={`${isOpen ? "opened" : ""} line`} />
@@ -92,36 +92,38 @@ const NavigationLink = ({ path, title }: { title: string; path: string }) => {
 };
 
 const SocialIcons = () => (
-  <ul className="flex md:flex gap-8 list-none">
-    <motion.li
-      variants={staggerItemVariant}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
-    >
-      <a href={INSTAGRAM_URL} className="cursor-pointer">
-        <img width={32} src="/assets/ig.svg" alt="Profil na Instagram" />
-      </a>
-    </motion.li>
-    <motion.li
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
-      variants={staggerItemVariant}
-    >
-      <a href={FACEBOOK_URL} className="cursor-pointer">
-        <img width={32} src="/assets/fb.svg" alt="Profil na Facebook" />
-      </a>
-    </motion.li>
+  <li>
+    <ul className="flex md:flex gap-8 list-none">
+      <motion.li
+        variants={staggerItemVariant}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <a href={INSTAGRAM_URL} className="cursor-pointer">
+          <img width={32} src="/assets/ig.svg" alt="Profil na Instagram" />
+        </a>
+      </motion.li>
+      <motion.li
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        variants={staggerItemVariant}
+      >
+        <a href={FACEBOOK_URL} className="cursor-pointer">
+          <img width={32} src="/assets/fb.svg" alt="Profil na Facebook" />
+        </a>
+      </motion.li>
 
-    <motion.li
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
-      variants={staggerItemVariant}
-    >
-      <a href={TIKTOK_URL} className="cursor-pointer">
-        <img width={32} src="/assets/tiktok.svg" alt="Profil na Tiktok" />
-      </a>
-    </motion.li>
-  </ul>
+      <motion.li
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        variants={staggerItemVariant}
+      >
+        <a href={TIKTOK_URL} className="cursor-pointer">
+          <img width={32} src="/assets/tiktok.svg" alt="Profil na Tiktok" />
+        </a>
+      </motion.li>
+    </ul>
+  </li>
 );
 
 const NavigationList = ({

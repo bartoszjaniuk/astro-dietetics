@@ -50,7 +50,8 @@ const Content = () => {
             <p className="font-medium text-2xl">Gabinet Dietetyczny UMAMI</p>
             <div className="flex gap-2 items-center">
               <img
-                src="/assets/offer-introduction.png"
+                src="/assets/pani-dietetyk-poza-bok.webp"
+                alt="Zdjęcie Pani Dietetyk ze skrzyżowanymi rękoma bokiem"
                 className="bg-white border border-primary rounded-full w-[42px] h-[42px] object-contain"
               />
               <p className="">mgr Aleksandra Kajstura-Janiuk</p>

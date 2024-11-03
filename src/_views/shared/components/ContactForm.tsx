@@ -100,6 +100,7 @@ export const ContactForm = ({
       />
 
       <Button
+        name="Wyślij wiadomość"
         className="mt-4 w-full"
         size="sm"
         type="submit"

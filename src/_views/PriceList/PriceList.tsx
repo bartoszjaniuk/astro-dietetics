@@ -10,7 +10,7 @@ const Content = () => {
       <Introduction />
       <Individual />
       <section className="min-h-full py-4 xl:py-0 xl:min-h-[400px] w-full relative container responsive-padding mx-auto flex items-center z-[-1]">
-        <span className="opacity-20 fixed left-[0%] top-[0%] w-full h-full [background-image:url('/assets/breakfast.jpg')] xl:bg-no-repeat xl:bg-cover" />
+        <span className="opacity-20 fixed left-[0%] top-[0%] w-full h-full [background-image:url('/assets/owsianki-i-gofry.webp')] xl:bg-no-repeat xl:bg-cover" />
 
         <div className="flex flex-col gap-6 text-center">
           <h1 className="text-5xl">Dieta online bez wychodzenia z domu</h1>

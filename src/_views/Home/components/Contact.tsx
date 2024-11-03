@@ -29,10 +29,10 @@ const Content = () => {
           <h2 className="text-primary text-3xl font-black 2xl:text-5xl">
             Skontaktuj się ze mną
           </h2>
-          <h5 className="text-xl">
+          <h3 className="text-xl">
             Potrzebujesz specjalistycznej porady? Napisz do mnie za pomocą
             formularza lub zadzwoń.
-          </h5>
+          </h3>
         </div>
 
         <div className="flex flex-col xl:flex-row gap-8">
@@ -46,7 +46,7 @@ const Content = () => {
             {successMessage ? (
               <Alert onClick={onClearMessage} message={successMessage} />
             ) : null}
-            <h3 className="text-3xl text-primary py-4">Napisz do mnie</h3>
+            <h5 className="text-3xl text-primary py-4">Napisz do mnie</h5>
 
             <ContactForm isLoading={isLoading} onSubmit={onSubmit} />
           </div>

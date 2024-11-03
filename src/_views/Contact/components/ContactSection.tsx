@@ -62,7 +62,8 @@ export const ContactSection = () => {
               </h5>
               <div className="flex gap-2 items-center">
                 <img
-                  src="/assets/offer-introduction.png"
+                  src="/assets/pani-dietetyk-poza-bok.webp"
+                  alt="Zdjęcie Pani Dietetyk ze skrzyżowanymi rękoma bokiem"
                   className="bg-white border border-primary rounded-full w-[72px] h-[72px] object-contain"
                 />
                 <p className="text-lg 2xl:text-2xl font-semibold">

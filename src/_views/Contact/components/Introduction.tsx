@@ -33,8 +33,8 @@ export const Introduction = () => {
         </div>
         <div className="flex-grow-1 xl:w-[30%] flex justify-center pt-8">
           <img
-            src="/assets/contact.jpg"
-            alt="Landing Image"
+            src="/assets/pani-dietetyk-trzymajaca-owoce.jpg"
+            alt="Zdjećcie pani dietetyk trzymająca owoce"
             className="object-contain w-auto max-w-full h-[500px] z-10"
           />
         </div>
